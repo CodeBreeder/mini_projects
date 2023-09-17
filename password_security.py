@@ -1,5 +1,5 @@
 # Password Security: Check for total number of permutations
-password_length = 8 
+password_length = 15 
 counter = 1 
 permutations = 1 
 while counter <= password_length:
