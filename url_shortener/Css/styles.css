@@ -1,0 +1,161 @@
+:root {
+  --darkBg-clr: #020617;
+  --grayishBg-clr: #4f5165;
+  --main-clr: #b5ed0d;
+  --border-clr: #0ef;
+  --text-clr: #f1f5f9;
+  --border-size: 2px;
+  --border-radius: 20px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background: var(--grayishBg-clr);
+  display: flex;
+  font-family: 'General Sans', sans-serif;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+h1 {
+  color: var(--main-clr);
+  font-size: 4rem;
+}
+
+
+.wrapper {
+  align-items: center;
+  background: var(--darkBg-clr);
+  border-radius: 200px 10px;
+  border: var(--border-size) solid var(--border-clr);
+  display: flex;
+  flex-direction: column;
+  height: 60%; 
+  justify-content: center;
+  width: 40%;
+  padding: 10px;
+  position: relative;
+}
+
+.wrapper::before {
+  background: var(--main-clr);
+  border-radius: 10px;
+  border: var(--border-size) solid var(--darkBg-clr);
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.long,
+.short {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  width: 90%;
+}
+
+.long {
+  margin-top: 40px;
+}
+
+#long-url,
+#short-url {
+  background: var(--grayishBg-clr);
+  border-bottom-left-radius: var(--border-radius);
+  border: var(--border-size) solid var(--border-clr);
+  border-right: none;
+  border-top-left-radius: var(--border-radius);
+  color: var(--main-clr);
+  font-weight: 500;
+  font-size: 1.5rem;
+  outline: none;
+  padding: 10px 20px;
+  width: 80%;
+}
+
+#shortener-btn,
+#copy-btn {
+  background: var(--darkBg-clr);
+  border-bottom-right-radius: var(--border-radius);
+  border: var(--border-size) solid var(--border-clr);
+  border-left: none;
+  border-top-right-radius: var(--border-radius);
+  margin-left: -2px;
+}
+
+#shortener-btn:hover i,
+#copy-btn:hover i {
+  color: var(--border-clr);
+  transform: scale(1.5);
+}
+
+#shortener-btn:active i,
+#copy-btn:active i {
+  transform: scale(2);
+  color: var(--main-clr);
+}
+
+#shortener-btn {
+  padding: 11px 11px 12px;
+}
+
+#copy-btn {
+  padding: 13px 12px 10px;
+}
+
+#shortener-btn i,
+#copy-btn i {
+  color: var(--main-clr);    
+  transition: all .3s;
+}
+
+
+/* Responsiveness & Utils Classes ====== NOT Completed */
+
+.container {
+   /* percent use on width because we are using mobile first  */
+    width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; 
+
+  /* alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: inherit;
+} 
+
+  /* xs  */
+ @media (max-width: 360px) {} 
+  
+  /* small  */
+@media (min-width: 640px) {}
+  
+  /* md  */
+@media (min-width: 768px) {}
+  /* lg  */
+@media (min-width: 1024px) {}
+  /* xl  */
+@media (min-width: 1280px) {}
+  /* 2xl  */
+@media (min-width: 1536px) {}
